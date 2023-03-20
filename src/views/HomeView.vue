@@ -17,22 +17,38 @@
                     Hello There!.<br />
                     I'm <span class="text-primary">Alfian Luthfi</span>
                 </h1>
-                <p class="lead">Indonesian-based</p>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <p class="lead mb-0">
+                    Indonesian-based
+                    <vue-typed-js
+                        :loop="true"
+                        :strings="['Fullstack Engineer', 'Web Enthusiast']"
+                    >
+                        <span class="typing fw-bold text-highlight"></span>
+                    </vue-typed-js>
+                </p>
+                <SocialNavigation />
+                <div
+                    class="d-grid gap-2 mt-3 d-md-flex justify-content-md-start"
+                >
                     <button
                         type="button"
                         class="btn btn-primary btn-lg px-4 me-md-2"
                     >
-                        Primary
-                    </button>
-                    <button
-                        type="button"
-                        class="btn btn-outline-secondary btn-lg px-4"
-                    >
-                        Default
+                        Get in touch
+                        <i class="fa-solid fa-arrow-right ms-2"></i>
                     </button>
                 </div>
             </div>
         </div>
     </div>
 </template>
+
+<script>
+import SocialNavigation from "../components/hero/SocialNavigation.vue";
+
+export default {
+    components: {
+        SocialNavigation,
+    },
+};
+</script>
