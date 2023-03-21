@@ -21,8 +21,10 @@
                     class="mx-2 py-2 text-dark text-decoration-none cursor-pointer"
                     >About</RouterLink
                 >
-                <a class="mx-2 py-2 text-dark text-decoration-none" href="#"
-                    >Contact</a
+                <RouterLink
+                    to="/contact"
+                    class="mx-2 py-2 text-dark text-decoration-none cursor-pointer"
+                    >Contact</RouterLink
                 >
             </nav>
         </div>
