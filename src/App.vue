@@ -21,6 +21,7 @@
         <div class="container py-3">
             <Navbar />
             <RouterView />
+            <Footer />
         </div>
     </div>
 </template>
@@ -28,10 +29,12 @@
 <script>
 import { RouterView } from "vue-router";
 import Navbar from "./components/Navbar.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
     components: {
         Navbar,
+        Footer,
     },
 
     data() {

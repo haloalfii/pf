@@ -11,11 +11,15 @@
             </a>
 
             <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-                <a class="mx-2 py-2 text-dark text-decoration-none" href="#"
-                    >Home</a
+                <RouterLink
+                    to="/"
+                    class="mx-2 py-2 text-dark text-decoration-none cursor-pointer"
+                    >Home</RouterLink
                 >
-                <a class="mx-2 py-2 text-dark text-decoration-none" href="#"
-                    >About</a
+                <RouterLink
+                    to="/about"
+                    class="mx-2 py-2 text-dark text-decoration-none cursor-pointer"
+                    >About</RouterLink
                 >
                 <a class="mx-2 py-2 text-dark text-decoration-none" href="#"
                     >Contact</a
@@ -26,7 +30,9 @@
 </template>
 
 <script>
-export default {};
+import { RouterLink } from "vue-router";
+
+export default { components: { RouterLink } };
 </script>
 
 <style lang="scss" scoped></style>
