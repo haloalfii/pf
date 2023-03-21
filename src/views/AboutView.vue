@@ -22,13 +22,15 @@
                         for more than 3 year. I love to create a web app that
                         make people work easier than ever.
                     </p>
-                    <button
+                    <a
+                        href="https://drive.google.com/file/d/1nofwssl8bPfZmbB5u2L5WuxJCemLhBk5/view?usp=share_link"
                         class="btn btn-primary text-light btn-lg"
                         type="button"
+                        target="_blank"
                     >
                         <i class="fa-solid fa-download"></i>
                         Download CV
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>

@@ -1,28 +1,34 @@
 <template>
     <div id="app" class="position-relative">
-        <div
-            v-if="theme == 'light'"
-            @click="themeToggle"
-            title="Change to Dark Mode"
-            class="mode-toggle d-flex align-items-center justify-content-center cursor-pointer"
-        >
-            <p class="mb-0" style="font-size: 28px">☀️</p>
-        </div>
+        <Transition name="fade">
+            <Preloader v-if="loading" />
+        </Transition>
 
-        <div
-            v-else
-            @click="themeToggle"
-            title="Change to Light Mode"
-            class="mode-toggle d-flex align-items-center justify-content-center cursor-pointer"
-        >
-            <p class="mb-0" style="font-size: 28px">🌙</p>
-        </div>
+        <template v-if="!loading">
+            <div
+                v-if="theme == 'light'"
+                @click="themeToggle"
+                title="Change to Dark Mode"
+                class="mode-toggle d-flex align-items-center justify-content-center cursor-pointer"
+            >
+                <p class="mb-0" style="font-size: 28px">☀️</p>
+            </div>
 
-        <div class="container py-3">
-            <Navbar />
-            <RouterView />
-            <Footer />
-        </div>
+            <div
+                v-else
+                @click="themeToggle"
+                title="Change to Light Mode"
+                class="mode-toggle d-flex align-items-center justify-content-center cursor-pointer"
+            >
+                <p class="mb-0" style="font-size: 28px">🌙</p>
+            </div>
+
+            <div class="container py-3">
+                <Navbar />
+                <RouterView />
+                <Footer />
+            </div>
+        </template>
     </div>
 </template>
 
@@ -30,17 +36,26 @@
 import { RouterView } from "vue-router";
 import Navbar from "./components/Navbar.vue";
 import Footer from "./components/Footer.vue";
+import Preloader from "./components/preloader/Preloader.vue";
 
 export default {
     components: {
         Navbar,
         Footer,
+        Preloader,
     },
 
     data() {
         return {
-            theme: "light",
+            theme: "dark",
+            loading: 1,
         };
+    },
+
+    mounted() {
+        setTimeout(() => {
+            this.loading = 0;
+        }, 2000);
     },
 
     methods: {
