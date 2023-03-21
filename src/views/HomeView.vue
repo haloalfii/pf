@@ -1,6 +1,6 @@
 <template>
     <div class="col-xxl-12 px-4 py-5">
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5 mb-5">
             <div class="col-10 col-sm-8 col-lg-6">
                 <img
                     src="../assets/images/alfi.png"
@@ -40,15 +40,18 @@
                 </div>
             </div>
         </div>
+        <Experience />
     </div>
 </template>
 
 <script>
 import SocialNavigation from "../components/hero/SocialNavigation.vue";
+import Experience from "../components/Experience.vue";
 
 export default {
     components: {
         SocialNavigation,
+        Experience,
     },
 };
 </script>
