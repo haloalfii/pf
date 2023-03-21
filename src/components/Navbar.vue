@@ -3,12 +3,15 @@
         <div
             class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom"
         >
-            <RouterLink
-                to="/"
-                class="d-flex align-items-center text-dark text-decoration-none"
-            >
-                <span class="fs-1 text-dark">Alfi</span>
-            </RouterLink>
+            <div class="d-flex align-items-center">
+                <img src="/images/logo.png" width="48" height="48" alt="" />
+                <RouterLink
+                    to="/"
+                    class="d-flex text-dark text-decoration-none"
+                >
+                    <span class="fs-1 text-dark mt-3">Alfi</span>
+                </RouterLink>
+            </div>
 
             <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
                 <RouterLink
