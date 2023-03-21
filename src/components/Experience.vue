@@ -41,8 +41,15 @@ export default {
                     where: "Dunia Coding",
                     when: "(2020 - present)",
                     as: "Fullstack Engineer and Web Development Mentor",
-                    how: "Dunia Coding is a platform for learning programming especially for beginners. I started entering the Dunia Coding in November 2020, to work on a Web Apps-based information system that the Dunia Coding had not previously had. In the Dunia Coding, I also often give material for Webinars and Workshops related to Web Development",
+                    how: "Dunia Coding is a platform for learning programming especially for beginners. I started entering the Dunia Coding in November 2020, to work on a Web Apps-based information system that the <a target='_blank' href='https://duniacoding.id/'>Dunia Coding</a> had not previously had. In the Dunia Coding, I also often give material for Webinars and Workshops related to Web Development",
                     link: "https://duniacoding.id/",
+                },
+                {
+                    where: "PT Zerolim Tekno Lestari ",
+                    when: "(2020)",
+                    as: "Backend Engineer Intern",
+                    how: "I entered as a Backend Engineer Intern at Zerolim when Zerolim opened an Intern opportunity at Grow With Zerolim #4. At Zerolim I was assigned as a Backend, with <a target='_blank' href='https://codeigniter.com/'>Code Igniter</a> as the Framework for the Backend there.",
+                    link: "https://zerolim.id/",
                 },
             ],
         };
