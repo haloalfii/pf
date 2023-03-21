@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
+import ContactView from "../views/ContactView.vue";
 
 Vue.use(VueRouter);
 
@@ -18,6 +19,11 @@ const router = new VueRouter({
             path: "/about",
             name: "about",
             component: AboutView,
+        },
+        {
+            path: "/contact",
+            name: "contact",
+            component: ContactView,
         },
     ],
 });
