@@ -9,6 +9,7 @@
   "dependencies": {
     "bootstrap": "^5.2.3",
     "vue": "^2.7.7",
+    "vue-page-transition": "^0.2.2",
     "vue-router": "^3.5.4",
     "vue-typed-js": "^0.1.2"
   },
