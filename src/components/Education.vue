@@ -1,6 +1,9 @@
 <template>
     <div class="py-5">
-        <h1 class="border-bottom mb-5 mt-5" style="line-height: 120px">
+        <h1
+            class="border-bottom mb-5 mt-5 text-dark"
+            style="line-height: 120px"
+        >
             Education
         </h1>
         <div
@@ -9,17 +12,20 @@
             class="row gx-2 mb-5"
         >
             <div class="col-12 col-lg-4">
-                <p class="fw-bolder mb-1 fs-5">{{ data.where }}</p>
-                <p class="text-muted small">{{ data.when }}</p>
+                <p class="fw-bolder mb-1 fs-5 text-dark">{{ data.where }}</p>
+                <p class="text-muted small text-dark">{{ data.when }}</p>
             </div>
             <div class="col-12 col-lg-8">
-                <p class="fw-bolder fs-5">{{ data.as }}</p>
-                <p class="text-muted fw-light fs-5">
+                <p class="fw-bolder fs-5 text-dark">{{ data.as }}</p>
+                <p class="text-muted text-dark fw-light fs-5">
                     <span v-html="data.how"></span>
                 </p>
-                <a class="link-body fs-5" target="_blank" :href="data.link">{{
-                    data.link
-                }}</a>
+                <a
+                    class="link-body fs-5 text-primary"
+                    target="_blank"
+                    :href="data.link"
+                    >{{ data.link }}</a
+                >
             </div>
         </div>
     </div>

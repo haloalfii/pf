@@ -7,21 +7,18 @@
                 href="/"
                 class="d-flex align-items-center text-dark text-decoration-none"
             >
-                <span class="fs-1">Alfi</span>
+                <span class="fs-1 text-dark">Alfi</span>
             </a>
 
             <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-                <a class="me-3 py-2 text-dark text-decoration-none" href="#"
+                <a class="mx-2 py-2 text-dark text-decoration-none" href="#"
                     >Home</a
                 >
-                <a class="me-3 py-2 text-dark text-decoration-none" href="#"
+                <a class="mx-2 py-2 text-dark text-decoration-none" href="#"
                     >About</a
                 >
-                <a class="me-3 py-2 text-dark text-decoration-none" href="#"
-                    >Support</a
-                >
-                <a class="py-2 text-dark text-decoration-none" href="#"
-                    >Pricing</a
+                <a class="mx-2 py-2 text-dark text-decoration-none" href="#"
+                    >Contact</a
                 >
             </nav>
         </div>
