@@ -25,7 +25,9 @@
 
             <div class="container py-3">
                 <Navbar />
-                <RouterView />
+                <vue-page-transition name="fade-in-right">
+                    <router-view />
+                </vue-page-transition>
                 <Footer />
             </div>
         </template>

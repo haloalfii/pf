@@ -9,7 +9,9 @@ import "./assets/scss/main.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.js";
 import VueTypedJs from "vue-typed-js";
+import VuePageTransition from "vue-page-transition";
 
+Vue.use(VuePageTransition);
 Vue.use(VueTypedJs);
 new Vue({
     router,
