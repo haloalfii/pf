@@ -1,5 +1,46 @@
 @import "./custom";
+@import "./variable";
+@import "./variable-dark";
 
 body {
     font-family: "Inter", sans-serif !important;
+}
+
+[data-bs-theme="dark"] {
+    body {
+        background-color: $dark-base-color;
+        transition: background 1s;
+    }
+
+    .text-dark {
+        color: $dark-text-color !important;
+    }
+
+    .text-primary {
+        color: $dark-primary !important;
+    }
+
+    .text-highlight:after {
+        background: $dark-primary !important;
+    }
+
+    .btn-primary {
+        background-color: $dark-primary !important;
+    }
+
+    .text-light {
+        color: #000 !important;
+    }
+
+    .mode-toggle {
+        background: rgb(13, 17, 23) !important;
+        border: 1px solid rgb(48, 54, 61) !important;
+    }
+}
+
+[data-bs-theme="light"] {
+    body {
+        background-color: $base-color;
+        transition: background 1s;
+    }
 }

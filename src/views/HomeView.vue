@@ -16,11 +16,11 @@
                 </div>
                 <div class="col-lg-6">
                     <!-- <p class="lead text-muted">Hello There!</p> -->
-                    <h1 class="display-5 fw-bold lh-1 mb-3">
+                    <h1 class="display-5 fw-bold lh-1 mb-3 text-dark">
                         Hello There!👋<br />
                         I'm <span class="text-primary">Alfian Luthfi</span>
                     </h1>
-                    <p class="lead mb-0">
+                    <p class="lead mb-0 text-dark">
                         Indonesian-based
                         <vue-typed-js
                             :loop="true"
@@ -41,7 +41,7 @@
                     >
                         <button
                             type="button"
-                            class="btn btn-primary btn-lg px-4 me-md-2"
+                            class="btn btn-primary btn-lg px-4 me-md-2 text-light"
                         >
                             Get in touch
                             <i class="fa-solid fa-arrow-right ms-2"></i>
