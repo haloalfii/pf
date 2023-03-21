@@ -39,21 +39,19 @@
                     <div
                         class="d-grid gap-2 mt-3 d-md-flex justify-content-md-start"
                     >
-                        <button
+                        <RouterLink
+                            to="/about"
                             type="button"
                             class="btn btn-primary btn-lg px-4 me-md-2 text-light"
                         >
-                            Get in touch
+                            Know me more
                             <i class="fa-solid fa-arrow-right ms-2"></i>
-                        </button>
+                        </RouterLink>
                     </div>
                 </div>
             </div>
             <Experience />
             <Education />
-        </div>
-        <div>
-            <Footer />
         </div>
     </div>
 </template>
@@ -62,14 +60,14 @@
 import SocialNavigation from "../components/hero/SocialNavigation.vue";
 import Experience from "../components/Experience.vue";
 import Education from "../components/Education.vue";
-import Footer from "../components/Footer.vue";
+import { RouterLink } from "vue-router";
 
 export default {
     components: {
         SocialNavigation,
         Experience,
         Education,
-        Footer,
+        RouterLink,
     },
 };
 </script>

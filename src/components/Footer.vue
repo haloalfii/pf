@@ -3,7 +3,14 @@
         class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top"
     >
         <p class="col-md-4 mb-0 text-muted text-dark">
-            &copy; 2022 Company, Inc
+            &copy; 2023
+            <a
+                href="https://github.com/haloalfii/"
+                target="_blank"
+                class="text-dark text-decoration-none"
+                rel="noopener noreferrer"
+                >@haloalfii</a
+            >
         </p>
 
         <a
@@ -18,13 +25,17 @@
 
         <ul class="nav col-md-4 justify-content-end">
             <li class="nav-item">
-                <a href="#" class="nav-link ps-0 pe-2 text-muted text-dark"
-                    >Home</a
+                <RouterLink
+                    to="/"
+                    class="nav-link ps-0 pe-2 text-muted text-dark"
+                    >Home</RouterLink
                 >
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link ps-0 pe-2 text-muted text-dark"
-                    >About</a
+                <RouterLink
+                    to="/about"
+                    class="nav-link ps-0 pe-2 text-muted text-dark"
+                    >About</RouterLink
                 >
             </li>
             <li class="nav-item">
@@ -37,7 +48,9 @@
 </template>
 
 <script>
-export default {};
+import { RouterLink } from "vue-router";
+
+export default { components: { RouterLink } };
 </script>
 
 <style lang="scss" scoped></style>
