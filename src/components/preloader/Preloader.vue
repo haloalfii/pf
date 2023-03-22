@@ -2,14 +2,20 @@
     <div class="preloader">
         <p class="fs-1 text-dark">
             <vue-typed-js
-                :typeSpeed="50"
-                :startDelay="100"
-                :backDelay="50"
+                :typeSpeed="30"
+                :startDelay="10"
+                :backDelay="40"
                 :cursorChar="''"
                 :loop="true"
-                :strings="['Hello!', 'Nǐ hǎo', 'Kon`nichiwa']"
+                :strings="[
+                    'Hello!',
+                    '¡Hola!',
+                    'Bonjour!',
+                    'Nǐ hǎo!',
+                    'Kon nichiwa!',
+                ]"
             >
-                <span class="typing text-highlight"></span>
+                <span class="typing"></span>
             </vue-typed-js>
         </p>
     </div>
