@@ -16,16 +16,25 @@
             <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
                 <RouterLink
                     to="/"
+                    :class="{
+                        'text-primary': this.$route.fullPath == '/',
+                    }"
                     class="mx-2 py-2 text-dark text-decoration-none cursor-pointer"
                     >Home</RouterLink
                 >
                 <RouterLink
                     to="/about"
+                    :class="{
+                        'text-primary': this.$route.fullPath == '/about',
+                    }"
                     class="mx-2 py-2 text-dark text-decoration-none cursor-pointer"
                     >About</RouterLink
                 >
                 <RouterLink
                     to="/contact"
+                    :class="{
+                        'text-primary': this.$route.fullPath == '/contact',
+                    }"
                     class="mx-2 py-2 text-dark text-decoration-none cursor-pointer"
                     >Contact</RouterLink
                 >
@@ -37,7 +46,9 @@
 <script>
 import { RouterLink } from "vue-router";
 
-export default { components: { RouterLink } };
+export default {
+    components: { RouterLink },
+};
 </script>
 
 <style lang="scss" scoped></style>
