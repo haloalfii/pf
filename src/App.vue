@@ -58,6 +58,17 @@ export default {
         setTimeout(() => {
             this.loading = 0;
         }, 2000);
+
+        if (localStorage.getItem("theme") == null) {
+            localStorage.setItem("theme", "dark");
+        } else {
+            var element = document.getElementsByTagName("html")[0];
+            element.setAttribute(
+                "data-bs-theme",
+                localStorage.getItem("theme")
+            );
+            this.theme = localStorage.getItem("theme");
+        }
     },
 
     methods: {
@@ -66,9 +77,11 @@ export default {
             if (element.getAttribute("data-bs-theme") == "dark") {
                 element.setAttribute("data-bs-theme", "light");
                 this.theme = "light";
+                localStorage.setItem("theme", "light");
             } else {
                 element.setAttribute("data-bs-theme", "dark");
                 this.theme = "dark";
+                localStorage.setItem("theme", "dark");
             }
         },
     },
