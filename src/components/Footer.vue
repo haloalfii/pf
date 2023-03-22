@@ -13,15 +13,15 @@
             >
         </p>
 
-        <a
-            href="/"
+        <RouterLink
+            to="/"
             class="col-md-4 d-flex align-items-center justify-content-center d-none d-lg-flex mb-md-0 me-md-auto link-dark text-decoration-none"
         >
             <i
                 class="fa-solid fa-heart text-danger"
                 style="font-size: 24px"
             ></i>
-        </a>
+        </RouterLink>
 
         <ul class="nav col-md-4 justify-content-end">
             <li class="nav-item">
