@@ -13,8 +13,10 @@
                         See you on the other side.
                     </p>
                 </div>
-                <div class="col-md-6 mt-3">
-                    <div style="margin-top: 57px">
+                <div
+                    class="col-md-6 mt-3 d-flex align-items-center justify-content-center"
+                >
+                    <div>
                         <div class="mb-2">
                             <a
                                 href="mailto:alfiankurniawan85@gmail.com"
