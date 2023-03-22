@@ -32,6 +32,9 @@ const router = new VueRouter({
             component: ErrorView,
         },
     ],
+    scrollBehavior() {
+        return { x: 0, y: 0 };
+    },
 });
 
 export default router;

@@ -40,7 +40,7 @@ export default {
                     where: "Amikom University",
                     when: "(2018 - 2022)",
                     as: "Informatics",
-                    how: "at Amikom Yogyakarta University, I entered the Informatics Study Program. In the Informatics Study Program I learned a lot about the basics of Programming and continued up to Advance Programming. I graduated from Amikom University with 3.71 GPA",
+                    how: "at Amikom Yogyakarta University, I entered the <a href='https://informatika.amikom.ac.id/' class='text-primary' target='_blank'>Informatics</a> Study Program. In the Informatics Study Program I learned a lot about the basics of Programming and continued up to Advance Programming. I graduated from Amikom University with 3.71 GPA",
                     link: "https://amikom.ac.id/",
                 },
             ],
