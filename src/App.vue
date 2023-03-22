@@ -1,86 +1,76 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <div id="app">
-    <header>
-      <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+    <div id="app" class="position-relative">
+        <Transition name="fade">
+            <Preloader v-if="loading" />
+        </Transition>
 
-      <div class="wrapper">
-        <HelloWorld msg="You did it!" />
+        <template v-if="!loading">
+            <div
+                v-if="theme == 'light'"
+                @click="themeToggle"
+                title="Change to Dark Mode"
+                class="mode-toggle d-flex align-items-center justify-content-center cursor-pointer"
+            >
+                <p class="mb-0" style="font-size: 28px">☀️</p>
+            </div>
 
-        <nav>
-          <router-link to="/">Home</router-link>
-          <router-link to="/about">About</router-link>
-        </nav>
-      </div>
-    </header>
+            <div
+                v-else
+                @click="themeToggle"
+                title="Change to Light Mode"
+                class="mode-toggle d-flex align-items-center justify-content-center cursor-pointer"
+            >
+                <p class="mb-0" style="font-size: 28px">🌙</p>
+            </div>
 
-    <router-view />
-  </div>
+            <div class="container py-3">
+                <Navbar />
+                <vue-page-transition name="fade-in-right">
+                    <router-view />
+                </vue-page-transition>
+                <Footer />
+            </div>
+        </template>
+    </div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
+<script>
+import { RouterView } from "vue-router";
+import Navbar from "./components/Navbar.vue";
+import Footer from "./components/Footer.vue";
+import Preloader from "./components/preloader/Preloader.vue";
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
+export default {
+    components: {
+        Navbar,
+        Footer,
+        Preloader,
+    },
 
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
+    data() {
+        return {
+            theme: "dark",
+            loading: 1,
+        };
+    },
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
+    mounted() {
+        setTimeout(() => {
+            this.loading = 0;
+        }, 2000);
+    },
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-}
-</style>
+    methods: {
+        themeToggle() {
+            var element = document.getElementsByTagName("html")[0];
+            if (element.getAttribute("data-bs-theme") == "dark") {
+                element.setAttribute("data-bs-theme", "light");
+                this.theme = "light";
+            } else {
+                element.setAttribute("data-bs-theme", "dark");
+                this.theme = "dark";
+            }
+        },
+    },
+};
+</script>
