@@ -18,9 +18,9 @@
                     </h1>
                     <p class="col-md-8 fs-4 text-dark">
                         Hii, I'm a fullstack web developer who Passionate about
-                        developing an awesome web app I've been in this industry
-                        for more than 3 year. I love to create a web app that
-                        make people work easier than ever.
+                        developing an awesome web app. I've been in this
+                        industry for more than 3 year. I love to create a web
+                        app that make people work easier than ever.
                     </p>
                     <a
                         href="https://drive.google.com/file/d/1nofwssl8bPfZmbB5u2L5WuxJCemLhBk5/view?usp=share_link"
