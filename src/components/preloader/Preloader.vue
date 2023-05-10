@@ -1,26 +1,30 @@
 <template>
     <div class="preloader">
-        <p class="fs-1 text-dark">
-            <vue-typed-js
-                :typeSpeed="30"
-                :startDelay="10"
-                :backDelay="40"
-                :cursorChar="''"
-                :loop="true"
-                :strings="[
-                    'Hello!',
-                    '¡Hola!',
-                    'Bonjour!',
-                    'Nǐ hǎo!',
-                    'Kon nichiwa!',
-                ]"
-            >
-                <span class="typing"></span>
-            </vue-typed-js>
-        </p>
+        <div v-for="(data, index) of list" :key="'index-' + index">
+            <p v-if="index == showing" class="fs-1 text-dark">
+                {{ data }}
+            </p>
+        </div>
     </div>
 </template>
 
 <script>
-export default {};
+export default {
+    data() {
+        return {
+            list: ["Hello!", "¡Hola!", "Bonjour!", "Nǐ hǎo!", "Kon nichiwa!"],
+            show: 0,
+        };
+    },
+
+    computed: {
+        showing() {
+            setTimeout(() => {
+                this.show++;
+            }, 400);
+
+            return this.show;
+        },
+    },
+};
 </script>

@@ -31,6 +31,16 @@
                     ><span class="menu-title sr-only">LinkedIn</span></a
                 >
             </li>
+            <li class="nav-item">
+                <a
+                    class="nav-link text-black nav-row-custom"
+                    href="https://medium.com/@haloalfii"
+                    target="_blank"
+                    title="Medium"
+                    ><i class="fab fa-medium fa-2x text-dark"></i
+                    ><span class="menu-title sr-only">Medium</span></a
+                >
+            </li>
         </ul>
     </nav>
 </template>
